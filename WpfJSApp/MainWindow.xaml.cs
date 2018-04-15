@@ -28,7 +28,8 @@ namespace WpfJSApp
         public MainWindow()
         {
             InitializeComponent();
-            browser.JavascriptObjectRepository.Register("boundAsync", new BoundObject(), true);
+           
+            browser.JavascriptObjectRepository.Register("boundAsync", new BoundObject(this), true);  // register object for interacting from JS
         }
 
         private void txtAdress_KeyDown(object sender, KeyEventArgs e)
@@ -75,23 +76,29 @@ namespace WpfJSApp
                         stsBar1.Content = onePlusOne;
                     }
                     );
-                 
                 }
             });
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-           
             browser.Load("C:/Users/eugen/source/repos/WpfJSApp/WpfJSApp/Pages/HTMLPage3.html");
         }
     }
 
-    public class BoundObject
+    public class BoundObject    // class for interaction from JS
     {
+        MainWindow mainWindow;
+
+        public BoundObject(MainWindow mainWindow)
+        {
+            this.mainWindow = mainWindow;
+        }
+
         public void ShowMessage(string msg)
         {
-            MessageBox.Show(msg);
+            mainWindow.Dispatcher.BeginInvoke((Action) delegate { mainWindow.stsBar1.Content = msg; });
+            MessageBox.Show(msg, "Message Box");
         }
     }
 }
