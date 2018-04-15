@@ -28,7 +28,7 @@ namespace WpfJSApp
         public MainWindow()
         {
             InitializeComponent();
-           
+            browser.JavascriptObjectRepository.Register("boundAsync", new BoundObject(), true);
         }
 
         private void txtAdress_KeyDown(object sender, KeyEventArgs e)
@@ -82,7 +82,7 @@ namespace WpfJSApp
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            browser.JavascriptObjectRepository.Register("boundAsync", new BoundObject(), true);
+           
             browser.Load("C:/Users/eugen/source/repos/WpfJSApp/WpfJSApp/Pages/HTMLPage3.html");
         }
     }
