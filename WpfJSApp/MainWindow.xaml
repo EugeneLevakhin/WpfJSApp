@@ -16,11 +16,13 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal" Background="Gray" Margin="2">
             <TextBox Name="txtAdress" Text ="{Binding ElementName=browser,Path=Address, Mode=TwoWay}" MinWidth="500" Margin="5" KeyDown="txtAdress_KeyDown"></TextBox>
             <Button Margin="5" Click="Button_Click">Call from string</Button>
-            <Button Margin="5" Click="Button_Click_1">Load html</Button>
+            <Button Margin="5" Click="Button_Click_1">1 click Load html 2 click - JS func invoke </Button>
             <Button Margin="5" Click="Button_Click_2">rtrn val frm scrpt</Button>
             <Button Margin="5" Click="Button_Click_3">JS to .NET</Button>
         </StackPanel>
-        <CefSharp:ChromiumWebBrowser Name ="browser" Grid.Row="1" Margin="2" Address="google.com"></CefSharp:ChromiumWebBrowser>
+        <ContentControl Grid.Row="1" Name="container">
+            <!--<CefSharp:ChromiumWebBrowser Name ="browser" Margin="2" Address="google.com"></CefSharp:ChromiumWebBrowser>-->
+        </ContentControl>
         <StatusBar Grid.Row="2" Margin="2" Background="Gray">
             <StatusBarItem>Status bar: </StatusBarItem>
             <StatusBarItem Name="stsBar1"></StatusBarItem>

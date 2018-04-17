@@ -6,17 +6,23 @@
     <title></title>
 
 </head>
+
 <body>
-    <!--<button type="button" onclick="myFunction()"> Click Me! </button>-->
-    <input type="button" value="Click me!" onclick="myFunction();">
-    <script>
+
+    <button onclick="myFunction();"> Click me! </button>
+
+    <script type="text/javascript">
+
+        (async function () {
+            await CefSharp.BindObjectAsync("boundAsync", "bound");
+        })();
 
         function myFunction() {
-            document.write("function invoked through button ");
-            document.write(Date());
+            boundAsync.showMessage("Message from JS");
         }
 
     </script>
+
 </body>
 
 </html>

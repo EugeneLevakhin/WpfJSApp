@@ -25,9 +25,14 @@ namespace WpfJSApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        ChromiumWebBrowser browser;
         public MainWindow()
         {
             InitializeComponent();
+            browser = new ChromiumWebBrowser();
+            browser.Address = "google.com";
+            browser.Margin = new Thickness(2);
+            container.Content = browser;
            
             browser.JavascriptObjectRepository.Register("boundAsync", new BoundObject(this), true);  // register object for interacting from JS
         }
@@ -52,7 +57,16 @@ namespace WpfJSApp
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            browser.Load("C:/Users/eugen/source/repos/WpfJSApp/WpfJSApp/Pages/HTMLPage1.html");
+            string adress = "file:///C:/Users/eugen/source/repos/WpfJSApp/WpfJSApp/Pages/HTMLPage1.html";
+
+            if (browser.Address != adress)
+            {
+                browser.Load("C:/Users/eugen/source/repos/WpfJSApp/WpfJSApp/Pages/HTMLPage1.html");
+            }
+            else
+            {
+                browser.ExecuteScriptAsync(@"myFunction(""Hello"");");
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -82,7 +96,7 @@ namespace WpfJSApp
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            browser.Load("C:/Users/eugen/source/repos/WpfJSApp/WpfJSApp/Pages/HTMLPage3.html");
+            browser.Load("C:/Users/eugen/source/repos/WpfJSApp/WpfJSApp/Pages/HTMLPage2.html");
         }
     }
 

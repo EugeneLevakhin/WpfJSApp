@@ -121,12 +121,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Images\Browser.png" />
+    <Folder Include="Pages\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Pages\HTMLPage2.html" />
+    <Resource Include="Images\Browser.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
