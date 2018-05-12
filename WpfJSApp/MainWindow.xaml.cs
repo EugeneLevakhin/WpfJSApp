@@ -76,14 +76,15 @@ namespace WpfJSApp
 	    					return 1 + 1;
     					})();";
 
-            browser.EvaluateScriptAsync(script).ContinueWith(x =>
-            {
+            browser.EvaluateScriptAsync(script).ContinueWith(x =>                           //var task = browser.EvaluateScriptAsync(script);
+            {                                                                               //task.ContinueWith(...);
                 var response = x.Result;
 
                 if (response.Success && response.Result != null)
                 {
                     var onePlusOne = (int)response.Result;
                     MessageBox.Show(onePlusOne.ToString());
+
                     //Do something here (To interact with the UI you must call BeginInvoke)
                     Dispatcher.BeginInvoke((Action)delegate()
                     {

@@ -84,7 +84,6 @@ C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\bin\x64\Debug\CefSharp.Wpf.XML
 C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\bin\x64\Debug\WpfJSApp.exe.config
 C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\bin\x64\Debug\WpfJSApp.exe
 C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\bin\x64\Debug\WpfJSApp.pdb
-C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\obj\x64\Debug\WpfJSApp.csprojResolveAssemblyReference.cache
 C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\obj\x64\Debug\MainWindow.g.cs
 C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\obj\x64\Debug\App.g.cs
 C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\obj\x64\Debug\WpfJSApp_MarkupCompile.cache
@@ -96,3 +95,4 @@ C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\obj\x64\Debug\WpfJSApp.csproj.Gene
 C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\obj\x64\Debug\WpfJSApp.csproj.CoreCompileInputs.cache
 C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\obj\x64\Debug\WpfJSApp.exe
 C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\obj\x64\Debug\WpfJSApp.pdb
+C:\Users\eugen\source\repos\WpfJSApp\WpfJSApp\obj\x64\Debug\WpfJSApp.csprojAssemblyReference.cache
