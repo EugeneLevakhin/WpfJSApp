@@ -1,1 +1,1 @@
-# Project for interaction WPF and JS
+# Test Project for interaction WPF and JS
