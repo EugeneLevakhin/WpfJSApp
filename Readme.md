@@ -1,1 +1,1 @@
-# Test Project for interaction WPF and JS
+# Just test Project for interaction WPF and JS
